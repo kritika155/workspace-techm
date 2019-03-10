@@ -1,0 +1,8 @@
+.persons ul li{
+    list-style-type: none;
+    padding:13px;
+    margin:5px;
+}
+.person span{
+    margin:4px;
+}

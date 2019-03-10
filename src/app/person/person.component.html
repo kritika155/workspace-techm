@@ -1,26 +1,29 @@
-<div class="person">
+<div class="persons">
+  
     <form>
         <input type="text" [(ngModel)]="person.id" placeholder="id" name="id">
 <br>
-        <input type="text" [(ngModel)]="person.name" placeholder="name" name="name">
-        <br>
+        <input type="text" [(ngModel)]="person.name" placeholder="name" name="name" value={{person.name}}>
+        <br>   
         <input type="text" [(ngModel)]="person.email" placeholder="email" name="email">
         <br>
         <input type="text" [(ngModel)]="person.phone" placeholder="phone" name="phone">
         <br>
         <input type="text" [(ngModel)]="person.address" placeholder="address" name="address">
         <br>
-
         <input type="button" (click)="addPerson()" value="addPerson" name="addPerson" id="addPerson">
       </form>
       <button type="button" (click)="deleteAll()" name="deleteAll">DeleteAll</button>
-
 </div>
-<div class="persons">
+<div class="personn">
   <ul>
     <li *ngFor="let person of persons">
-        <span>{{person.id}}</span>|<span>{{person.name}}</span>|<span>{{person.email}}</span>|<span>{{person.address}}</span>
-        <input type="button" name="deletePerson" id="deletePerson" (click)="deletePerson(person.id)"value="deletePerson">
-      </li>
+      <span class="bad">{{person.id}}</span>|
+      <span>{{person.name}}</span>|
+      <span>{{person.phone}}</span>|
+      <span>{{person.email}}</span>|
+      <span>{{person.address}}</span>
+      <input type="button" name="deletePerson" id="deletePerson" (click)="deletePerson(person.id)"value="deletePerson">
+    </li>
   </ul>
 </div>
