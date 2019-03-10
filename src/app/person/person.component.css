@@ -2,18 +2,14 @@
     list-style-type: none;
     padding: 5px;
     background-color: antiquewhite;
-    width:30rem;
+    width:40rem;
     margin:auto;
     border-radius: 5px;
     border-width: 1px;
     line-height: 1em;
 text-align:center;
 }
-.personn #deletePerson{
-    position: absolute;
-    margin-left:50px;
-    margin-top: 1px;
-}
+
 .persons{
     text-align: center;
 }

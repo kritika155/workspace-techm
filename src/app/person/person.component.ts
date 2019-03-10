@@ -29,6 +29,10 @@ persons;
   }
   updatePerson(){
     var update=false;
+    if(this.person.id==0)
+    {
+      this.person.id=Math.round(Math.random()*1000000);
+    }
     for(var i=0;i<this.persons.length;i++)
     {
       if(this.person.id==this.persons[i].id)
