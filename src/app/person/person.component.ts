@@ -19,9 +19,31 @@ persons;
       address:''
     }
   }
+  onSelect(person)
+  {
+    this.person=person;
+  }
   addPerson(){
     this.persons.push(this.person);
     this.resetPerson();
+  }
+  updatePerson(){
+    var update=false;
+    for(var i=0;i<this.persons.length;i++)
+    {
+      if(this.person.id==this.persons[i].id)
+      {
+        update=true;
+        this.persons[i]=this.person;
+        break;
+      }
+    }
+    if(!update)
+    {
+      this.persons.push(this.person);
+    }
+    this.resetPerson();
+
   }
   deletePerson(id){
     var List=[];

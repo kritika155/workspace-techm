@@ -12,6 +12,8 @@
         <input type="text" [(ngModel)]="person.address" placeholder="address" name="address">
         <br>
         <input type="button" (click)="addPerson()" value="addPerson" name="addPerson" id="addPerson">
+        <input type="button" (click)="updatePerson()" value="updatePerson" name="updatePerson" id="updatePerson">
+
       </form>
       <button type="button" (click)="deleteAll()" name="deleteAll">DeleteAll</button>
 </div>
@@ -23,7 +25,8 @@
       <span>{{person.phone}}</span>|
       <span>{{person.email}}</span>|
       <span>{{person.address}}</span>
-      <input type="button" name="deletePerson" id="deletePerson" (click)="deletePerson(person.id)"value="deletePerson">
+      <span><input type="button" name="deletePerson" id="deletePerson" (click)="deletePerson(person.id)"value="deletePerson"></span>
+      <span><input type="button" (click)=onSelect(person) value="select"></span>
     </li>
   </ul>
 </div>
